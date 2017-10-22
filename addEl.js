@@ -19,9 +19,6 @@ function passData(text)
             // show response and/or error/dialog status
             showResponse(data);
         }
-        // re-enable input
-        wisdomText.value = '';
-        wisdomText.locked = false;
     });
     /*var xhr = new XMLHttpRequest();
     var url ="https://runtime.lex.us-east-1.amazonaws.com/bot/CustoServe/alias/CustoServe/user/demo_user/text";
@@ -34,8 +31,7 @@ function passData(text)
 
 function showResponse(lexResponse) {
     var div = document.createElement("DIV");
-    var content = document.createElement("DIV")
-    div.className = "user"; 
+    var content = document.createElement("DIV");
     content.className = "chatblock-bot";
     var t;
     if (lexResponse.message) {

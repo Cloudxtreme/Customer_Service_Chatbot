@@ -6,6 +6,8 @@
     position: absolute;
     top: 0px;
     right: 0px;
+    height: 100px;
+    width: auto;
 }
 
 #container {

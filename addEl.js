@@ -5,9 +5,14 @@ function addUserText() {
     if(text == "") return;
     
     div.className = "user"; 
-    content.className = "chatblock";
+    content.className = "chatblock-user";
     var t = document.createTextNode(text);
-    div.appendChild(t);                           
+
+    var img = document.createElement("img");
+    img.src = "bot.jpg";
+    
+    div.appendChild(t);      
+    content.appendChild(img);                     
     content.appendChild(div);     
     chatWindow = document.getElementById("chat");
     chatWindow.appendChild(content); 

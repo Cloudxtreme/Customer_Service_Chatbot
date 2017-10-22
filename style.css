@@ -1,21 +1,22 @@
 #container {
     margin: 0 auto;
     width: 60%;
-    background: #Fff;
+    background: rgb(233, 233, 233);
     height: 100%;
     /* overflow: scroll; */
-
+    border-left: 2px solid;
 }
 
 form {
-    margin : 0 auto;
-    width: 90%; 
+    margin: 0 auto;
+    width: 90%;
     position: absolute;
     top: 90%;
 }
+
 form #textbox {
     width: 50%;
-    margin-left: 5%;
+    margin-left: 2%;
     font-size: 1em;
     line-height: 10px;
     border: 0;
@@ -26,9 +27,9 @@ form #textbox {
 }
 
 form .send {
-    width : 10%;
+    width: 10%;
     height: 3em;
-    background: #415977;
+    background: #5181b4;
     font-family: 'PT Sans', sans-serif;
     color: #fff;
     font-size: 1em;
@@ -37,20 +38,25 @@ form .send {
     margin-left: 20px;
     box-shadow: 1px;
     position: relative;
+    box-shadow: 2px 2px #7eaee9;
 }
+
 form .send:active {
-    transition: top 2s -webkit-transform 2s; /* Safari */
+    transition: top 2s -webkit-transform 2s;
+    /* Safari */
     top: 2px;
 }
 
 form .send:hover {
     background: #5878a1;
-    transition: background 2s -webkit-transform 2s; /* Safari */
-    
+    transition: background 2s -webkit-transform 2s;
+    /* Safari */
 }
+
 body {
-    color: #ffffff;
+    color: #fff;
     font-family: 'PT Sans', sans-serif;
+
 }
 
 #chat {
@@ -58,19 +64,31 @@ body {
     width: 100%;
     overflow-y: auto;
 }
-.chatblock {
-    width:100%;
+
+.chatblock-user,
+.chatblock-bot {
+    width: 100%;
     height: auto;
     overflow: hidden;
 }
 
+.chatblock-user img, .chatblock-bot img {
+    width: 6%;
+    border-radius: 100%;
+    float: left;
+}
+
+.chatblock-bot img {
+    float: right;
+}
+
 .user {
-    max-width: 70%;
+    max-width: 60%;
     background: rgb(131, 182, 199);
     padding: 15px;
-    margin-top:.8em;
+    margin-top: .8em;
     margin-bottom: .8em;
-    margin-left: 5%;
+    margin-left: 1%;
     float: left;
     display: block;
     border-radius: 20px;
@@ -81,7 +99,7 @@ body {
     width: auto;
     display: block;
     background: rgb(219, 146, 134);
-    margin-right: 5%;
+    margin-right: 2%;
     float: right;
     padding: .8em;
     margin-top: 20px;

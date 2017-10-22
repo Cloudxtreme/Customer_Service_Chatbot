@@ -47,13 +47,26 @@ function showResponse(lexResponse) {
     } else {
         t = document.createTextNode('(' + lexResponse.dialogState + ')');
     }
-    div.appendChild(t);      
+    div.appendChild(t);    
+    var img = document.createElement("img");
+    img.src = "bot.jpg";  
     content.appendChild(img);                     
     content.appendChild(div);
     chatWindow = document.getElementById("chat");
     chatWindow.appendChild(content); 
     chatWindow.scrollTop = chatWindow.scrollHeight;
     document.getElementById("textbox").value = "";     
+}
+
+function showError(daText) {
+
+    var div = document.createElement("DIV");
+    var content = document.createElement("DIV")
+    div.className = "user"; 
+    content.className = "chatblock-bot";
+    var t = document.createTextNode(daText);
+    conversationDiv.appendChild(errorPara);
+    conversationDiv.scrollTop = conversationDiv.scrollHeight;
 }
 
 function addUserText() {

@@ -1,11 +1,13 @@
-function passData()
+function passData(text)
 {
-    var text = document.getElementById("textbox").value;
     if(text == "") return;
-    //request.post(
-     // /  '/bot/botName/alias/botAlias/user/userId/text',
-    //);
-    addUserText();
+    var xhr = new XMLHttpRequest();
+    var url = "runtime.lex.us-east-1.amazonaws.com/bot/CustoServe/alias/CusstoServe/user/demo_user/text"
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({
+        "inputText": text,
+    }));
 }
 
 function addUserText() {
@@ -28,4 +30,5 @@ function addUserText() {
     chatWindow.appendChild(content); 
     chatWindow.scrollTop = chatWindow.scrollHeight;
     document.getElementById("textbox").value = "";
+    passData(text)
 }

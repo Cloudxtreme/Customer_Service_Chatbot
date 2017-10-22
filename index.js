@@ -5,7 +5,7 @@ app.set('port', (process.env.PORT || 5000));
 
 
 app.get('/', function(request, response) {
-  response.sendFile('chat.html');
+    response.sendFile(__dirname + '/chat.html');
 });
 
 app.listen(app.get('port'), function() {

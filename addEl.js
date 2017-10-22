@@ -1,6 +1,6 @@
 function passData(text)
 {
-    var trimText = text.value.trim();
+    var trimText = text;
     var params = {
         botAlias: 'CustoServe',
         botName: 'CustoServe',

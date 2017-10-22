@@ -2,10 +2,10 @@ function passData()
 {
     var text = document.getElementById("textbox").value;
     if(text == "") return;
-    var http = require('request');
     //request.post(
      // /  '/bot/botName/alias/botAlias/user/userId/text',
     //);
+    addUserText();
 }
 
 function addUserText() {

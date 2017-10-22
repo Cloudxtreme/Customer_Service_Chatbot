@@ -34,7 +34,7 @@ function showResponse(lexResponse) {
     var content = document.createElement("DIV");
     div.className = "bot";  
     content.className = "chatblock-bot";
-    var t = document.createTextNode(lexResponse.message + " " + JSON.stringify(lexResponse.slots));
+    var t = document.createTextNode(lexResponse.message /*+ " " + JSON.stringify(lexResponse.slots)*/);
     div.appendChild(t);    
     var img = document.createElement("img");
     img.src = "bot.jpg";  
@@ -68,7 +68,7 @@ function addUserText() {
     var t = document.createTextNode(text);
 
     var img = document.createElement("img");
-    img.src = "bot.jpg";
+    img.src = "user.jpg";
     
     div.appendChild(t);      
     content.appendChild(img);                     

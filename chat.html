@@ -2,6 +2,7 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>  
   <script type="text/javascript">
     // Initialize the Amazon Cognito credentials provider
     AWS.config.region = 'us-east-1'; // Region
@@ -9,11 +10,9 @@
         IdentityPoolId: 'us-east-1:aaf0a41f-fa88-469c-abb5-d505ff41d6c7',
     });
     var lexruntime = new AWS.LexRuntime();
-    var lexUserId = 'chatbot-demo' + Date.now();
     var sessionAttributes = {};
   </script>
   <script src="addEl.js"></script>
-  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>  
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
   <title>Something</title>
 </head>

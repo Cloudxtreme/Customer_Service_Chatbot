@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>  
+  <script type="text/javascript">
+    // Initialize the Amazon Cognito credentials provider
+    AWS.config.region = 'us-east-1'; // Region
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: 'us-east-1:aaf0a41f-fa88-469c-abb5-d505ff41d6c7',
+    });
+    var lexruntime = new AWS.LexRuntime();
+    var sessionAttributes = {};
+  </script>
+  <script src="addEl.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
+  <title>Agent</title>
+</head>
+
+<body>
+
+  <div id="container">
+    <br>
+    <div id="chat">
+      <div class="chatblock-bot"> 
+        <img src="bot.jpg"> 
+        <div class="bot">Hello, my name is TusharBot. How can I help you today?</div> 
+      </div> 
+    </div>
+    <form onsubmit="addUserText(); return false;">
+      <input type="text" id="textbox">
+      <input type="submit" class="send" value="SEND">
+    </form>
+    
+  </div>
+</body>
+</html>

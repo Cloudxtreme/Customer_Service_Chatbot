@@ -53,8 +53,14 @@ function showError(daText) {
     div.className = "user"; 
     content.className = "chatblock-bot";
     var t = document.createTextNode(daText);
-    conversationDiv.appendChild(errorPara);
-    conversationDiv.scrollTop = conversationDiv.scrollHeight;
+    div.appendChild(t);    
+    var img = document.createElement("img");
+    img.src = "bot.jpg";  
+    content.appendChild(img);                     
+    content.appendChild(div);
+    chatWindow = document.getElementById("chat");
+    chatWindow.appendChild(content); 
+    chatWindow.scrollTop = chatWindow.scrollHeight; 
 }
 
 function addUserText() {

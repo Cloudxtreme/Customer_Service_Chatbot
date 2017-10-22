@@ -32,6 +32,7 @@ function passData(text)
 function showResponse(lexResponse) {
     var div = document.createElement("DIV");
     var content = document.createElement("DIV");
+    div.className = "bot";  
     content.className = "chatblock-bot";
     var t;
     if (lexResponse.message) {

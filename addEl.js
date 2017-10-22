@@ -5,7 +5,7 @@ function passData(text)
         botAlias: 'CustoServe',
         botName: 'CustoServe',
         inputText: trimText,
-        userId: lexUserId,
+        userId: 'demo_bot',
         sessionAttributes: sessionAttributes
     };
     lexruntime.postText(params, function(err, data) {

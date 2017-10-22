@@ -34,16 +34,7 @@ function showResponse(lexResponse) {
     var content = document.createElement("DIV");
     div.className = "bot";  
     content.className = "chatblock-bot";
-    var t;
-    if (lexResponse.message) {
-        t = document.createTextNode(lexResponse.message);
-    }
-    if (lexResponse.dialogState === 'ReadyForFulfillment') {
-        t = document.createTextNode('Ready for fulfillment');
-        // TODO:  show slot values
-    } else {
-        t = document.createTextNode('(' + lexResponse.dialogState + ')');
-    }
+    var t = document.createTextNode(lexResponse.message);
     div.appendChild(t);    
     var img = document.createElement("img");
     img.src = "bot.jpg";  
